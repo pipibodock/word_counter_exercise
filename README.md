@@ -45,10 +45,10 @@ Config: Environment
 Automated Tests
 --------------
 
-1. Para executar os testes:
+1. Inside src folder, execute tests:
 
 ``` bash
-    src/pytest
+    pytest
 ```
 
 Manual Tests: EndPoints
@@ -60,6 +60,14 @@ Manual Tests: EndPoints
    src/python manage.py runserver
 ```
 
-2. To count Words:
+2. Home page:
 
-TODO
+```bash
+   http://127.0.0.1:8000
+```
+
+3. To count Words:
+
+```bash
+   http://127.0.0.1:8000/count/
+```
