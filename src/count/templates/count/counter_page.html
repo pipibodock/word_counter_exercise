@@ -1,0 +1,28 @@
+{% extends 'count/base.html' %}
+{% load static %}
+
+{% block header %}
+  {% include 'count/_header.html' %}
+{% endblock %}
+
+{% block 'content' %}
+<form action="{% url "count" %}" method="POST" class="text-center">
+  <h1>Input Text</h1>
+  {% csrf_token %}
+  <div>
+    {{ form_count.body }}
+  </div>
+  <br>
+  <button title="Count" class="button">Count</button>
+
+</form>
+
+{% if total %}
+    <h2 class="text-center">Your text has {{total}} word{{total|pluralize}}</h2>
+{% endif %}
+
+{% endblock %}
+
+{% block footer %}
+  {% include 'count/_footer.html' %}
+{% endblock %}
