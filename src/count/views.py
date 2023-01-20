@@ -1,4 +1,4 @@
-from django.shortcuts import redirect, render
+from django.shortcuts import render
 from django.views import View
 
 from count.forms import WordCountForm
@@ -21,6 +21,6 @@ class CountView(View):
         form = WordCountForm(request.POST)
         if form.is_valid():
             total = count_text(form.cleaned_data['body'])
-            return render(request, 'count/counter_page.html', {'total': total})
+            return render(request, 'count/counter_page.html', {'form_count': form, 'total': total})
 
         return render(request, 'count/counter_page.html', {'form_count': form})
