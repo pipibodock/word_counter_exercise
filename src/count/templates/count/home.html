@@ -1,0 +1,15 @@
+{% extends 'count/base.html' %}
+{% load static %}
+
+{% block header %}
+  {% include 'count/_header.html' %}
+{% endblock %}
+
+{% block 'content' %}
+<h1 class="text-center">Welcome!</h1>
+<p class="text-center">Click <strong>Word Count</strong> to add text</p>
+{% endblock %}
+
+{% block footer %}
+  {% include 'count/_footer.html' %}
+{% endblock %}
