@@ -1,0 +1,8 @@
+-r base.txt
+
+flake8==6.0.0
+ipdb
+pytest
+pytest-cov
+pytest-django
+pytest-flake8
